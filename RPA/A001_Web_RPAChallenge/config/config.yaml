@@ -1,0 +1,12 @@
+default:
+  retries: 3
+  timeout: 5
+
+dev:
+  rpachallenge_url: https://rpachallenge.com/
+
+uat:
+  rpachallenge_url: https://rpachallenge.com/
+
+prod:
+  rpachallenge_url: https://rpachallenge.com/
