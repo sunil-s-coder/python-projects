@@ -7,9 +7,10 @@
 - Git & GitHub
 
 ## 📂 Projects Structure
-    - 📂 [python-projects](https://github.com/sunil-s-coder/python-projects)
-        - 📂 [RPA](https://github.com/sunil-s-coder/python-projects/tree/main/RPA)
-            - 📂 [A001_Web_RPAChallenge]()
+
+- 📂 [projects](https://github.com/sunil-s-coder/python-projects)
+    - 📂 [RPA](https://github.com/sunil-s-coder/python-projects/tree/main/RPA)
+        - 📂 [A001_Web_RPAChallenge]
 
 ## 📂 Notable Projects
 
