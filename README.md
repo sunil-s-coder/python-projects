@@ -7,9 +7,9 @@
 - Git & GitHub
 
 ## 📂 Projects Structure
-    -:file_folder: `python-projects`
-        -:file_folder: `RPA`
-            -:file_folder: `A001_Web_RPAChallenge`
+    - 📂 [python-projects](https://github.com/sunil-s-coder/python-projects)
+        - 📂 [RPA](https://github.com/sunil-s-coder/python-projects/tree/main/RPA)
+            - 📂 [A001_Web_RPAChallenge]()
 
 ## 📂 Notable Projects
 
