@@ -14,7 +14,7 @@ Automates reading employee data from excel file and populatign fields in RPA Cha
 
 ## 📂 Projects Structure
 
-- 📂 [projects](https://github.com/sunil-s-coder/python-projects)
+- 📂 [Python-Projects](https://github.com/sunil-s-coder/python-projects)
     - 📂 [RPA](https://github.com/sunil-s-coder/python-projects/tree/main/RPA)
         - 📂 [A001_Web_RPAChallenge](https://github.com/sunil-s-coder/python-projects/tree/main/RPA/A001_Web_RPAChallenge)
 
