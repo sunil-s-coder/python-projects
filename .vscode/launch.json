@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Run RPA Challenge",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/RPA/A001_Web_RPAChallenge/src/test.py",
+      "cwd": "${workspaceFolder}", // This is the crucial part!
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    }
+  ]
+}

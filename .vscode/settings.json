@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./RPA/A000_ObjectRepository/RPAChallenge_Web"
+    ]
+}
