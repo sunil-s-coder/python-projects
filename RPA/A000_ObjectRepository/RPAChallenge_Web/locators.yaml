@@ -1,0 +1,11 @@
+
+rpa_challenge_app:
+  input_form:
+    FIRSTNAME_INPUT: "//*[text()='First Name']/following::input[1]"
+    LASTNAME_INPUT: "//*[text()='Last Name']/following::input[1]"
+    PHONENUMBER_INPUT: "//*[text()='Phone Number']/following::input[1]"
+    EMAIL_INPUT: "//*[text()='Email']/following::input[1]"
+    ADDRESS_INPUT: "//*[text()='Address']/following::input[1]"
+    ROLEINCOMPANY_INPUT: "//*[text()='Role in Company']/following::input[1]"
+    COMPANYNAME_INPUT: "//*[text()='Company Name']/following::input[1]"
+    SUBMIT_BUTTON: "//*[@value='Submit']"

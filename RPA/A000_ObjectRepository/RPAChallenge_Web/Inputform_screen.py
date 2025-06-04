@@ -1,35 +1,29 @@
 from playwright.sync_api import sync_playwright
-
-# RPA/A001_Web_RPAChallenge/src/test.py
 import sys
-import os
+from pathlib import Path
 
-# Get the absolute path of the directory containing the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
+#Add python-project path to module search list of paths to import project module
+current_dir = Path(__file__).parent
+project_root = current_dir.parent.parent.parent
+if project_root not in  sys.path:
+    sys.path.insert(0, str(project_root))
 
-# Navigate up three levels to reach 'python-projects/'
-# current_dir: .../RPA/A001_Web_RPAChallenge/src
-# 1st os.path.dirname: .../RPA/A001_Web_RPAChallenge
-# 2nd os.path.dirname: .../RPA
-# 3rd os.path.dirname: .../python-projects
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-
-# Add the project root to sys.path
-sys.path.insert(0, project_root) # Insert at the beginning to give it priority
-
-# Now your imports should work
 from RPA.A000_ObjectRepository.RPAChallenge_Web.rpaChallenge_WebApp import RPAChallenge
-# ... rest of your test.py code
+from RPA.A000_Utils.read_config import config_reader
 
 class InputForm(RPAChallenge):
     #Define selectors as constants
-    FIRSTNAME_INPUT = "//*[text()='First Name']/following::input[1]"
-    LASTNAME_INPUT = "//*[text()='Last Name']/following::input[1]"
-    PHONENUMBER_INPUT = "//*[text()='Phone Number']/following::input[1]"
-    EMAIL_INPUT = "//*[text()='Email']/following::input[1]"
-    ADDRESS_INPUT = "//*[text()='Address']/following::input[1]"
-    ROLEINCOMPANY_INPUT = "//*[text()='Role in Company']/following::input[1]"
-    COMPANYNAME_INPUT = "//*[text()='Company Name']/following::input[1]"
+    FIRSTNAME_INPUT = "rpa_challenge_app.input_form.FIRSTNAME_INPUT"
+    LASTNAME_INPUT = "rpa_challenge_app.input_form.LASTNAME_INPUT"
+    PHONENUMBER_INPUT = "rpa_challenge_app.input_form.PHONENUMBER_INPUT"
+    EMAIL_INPUT = "rpa_challenge_app.input_form.EMAIL_INPUT"
+    ADDRESS_INPUT = "rpa_challenge_app.input_form.ADDRESS_INPUT"
+    ROLEINCOMPANY_INPUT = "rpa_challenge_app.input_form.ROLEINCOMPANY_INPUT"
+    COMPANYNAME_INPUT = "rpa_challenge_app.input_form.COMPANYNAME_INPUT"
+    SUBMIT_BUTTON = "rpa_challenge_app.input_form.SUBMIT_BUTTON"
+
+    def __init__(self, page):
+        super().__init__(page)
 
     def get_firstName_input(self):
         return self.get_locator(self.FIRSTNAME_INPUT)
@@ -53,4 +47,4 @@ class InputForm(RPAChallenge):
         return self.get_locator(self.COMPANYNAME_INPUT)
 
     def get_submit_button(self):
-        return self.get_locator(self.COMPANYNAME_INPUT)
+        return self.get_locator(self.SUBMIT_BUTTON)
