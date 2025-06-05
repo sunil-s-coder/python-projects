@@ -8,7 +8,7 @@ if project_root not in  sys.path:
     sys.path.insert(0, str(project_root))
 
 #Import project modules
-from RPA.A000_ObjectRepository.RPAChallenge_Web.Inputform_screen import InputForm
+from rpa.a000_object_repository.RPAChallenge_Web.Inputform_screen import InputForm
 
 class RPAChallengeWorkflow:
 
@@ -18,8 +18,8 @@ class RPAChallengeWorkflow:
 
     def lauchApplication(self, url: str):
         try:
-            page.goto(url, timeout=120000)
-            page.wait_for_timeout(2000)
+            self.page.goto(url, timeout=120000)
+            self.page.wait_for_timeout(2000)
         except Exception as e:
             raise Exception(f"Error line no: {e.__traceback__.tb_lineno} & Error description: {str(e)}")
 
@@ -40,6 +40,7 @@ class RPAChallengeWorkflow:
             raise Exception(f"Error line no: {e.__traceback__.tb_lineno} & Error description: {str(e)}")
 
 
+#TESTING PURPOSE ONLY
 if __name__ == "__main__":
     rpa_challenge_url = "https://rpachallenge.com/"
     data = {"firstName": "Sunil",

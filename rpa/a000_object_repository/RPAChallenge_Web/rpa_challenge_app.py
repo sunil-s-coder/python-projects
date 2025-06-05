@@ -9,7 +9,7 @@ project_root = current_dir.parent.parent.parent
 if project_root not in  sys.path:
      sys.path.insert(0, str(project_root))
 
-from RPA.A000_Utils.read_config import config_reader
+from rpa.a000_utils.read_config import config_reader
 
 class RPAChallengeApp():
     def __init__(self, page: Page):
