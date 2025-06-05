@@ -11,7 +11,7 @@ if project_root not in  sys.path:
 
 from RPA.A000_Utils.read_config import config_reader
 
-class RPAChallenge():
+class RPAChallengeApp():
     def __init__(self, page: Page):
         self.page = page
         self.locators = self._load_locators()

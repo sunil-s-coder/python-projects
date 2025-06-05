@@ -8,10 +8,10 @@ project_root = current_dir.parent.parent.parent
 if project_root not in  sys.path:
     sys.path.insert(0, str(project_root))
 
-from RPA.A000_ObjectRepository.RPAChallenge_Web.rpaChallenge_WebApp import RPAChallenge
+from RPA.A000_ObjectRepository.RPAChallenge_Web.rpa_challenge_app import RPAChallengeApp
 from RPA.A000_Utils.read_config import config_reader
 
-class InputForm(RPAChallenge):
+class InputForm(RPAChallengeApp):
     #Define selectors as constants
     FIRSTNAME_INPUT = "rpa_challenge_app.input_form.FIRSTNAME_INPUT"
     LASTNAME_INPUT = "rpa_challenge_app.input_form.LASTNAME_INPUT"
